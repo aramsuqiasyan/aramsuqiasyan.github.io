@@ -1,130 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Cosmos</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="css/media.css">	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#007fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#007fff">
+	<meta name="msapplication-navbutton-color" content="#007fff">
+
+
+
+    <title>Lambda Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="shortcut icon" type="text/css" href="images/favicon.png">
+
 </head>
 <body>
-	<div class="wrapper">
-		<header>
-			<div class="header">
-				<div class="inner-header">
-					<div class="logo"><h2>LOGO</h2></div>
-					<input type="checkbox" name="manu"  class="menu">
-					<nav>	
-						<ul>
-							<li><a href="#">About</a></li>
-							<li><a href="#">How it works</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">Contact</a></li>
+    <div class="phoneMenu" id="menuBtn">&#9776;</div>
+	<nav class="nav" id="nav">
+		<div class="inner-nav">
+			<a href="index.html"><div class="nav-logo"><img src="images/logotop.png"></div></a>
+			<ul>
+                <li><a href="#" id="hom">Home</a></li>
+                <li><a href="#" id="ab">About</a></li>
+                <li><a href="#" id="ing">Ingredients</a></li>
+                <li><a href="#" id="men">Menu</a></li>
+                <li><a href="#" id="rev">Reviews</a></li>
+                <li><a href="#" id="res">Reservation</a></li>
+            </ul>
+             <div class="nav-share">
+                <a href="https://twitter.com/?lang=ru" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt="youtube"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+            </div>
+		</div>
+	</nav>
+	<header id="home">
+		<div class="inner-header">
+			<h1 class="wow lightSpeedIn">the right ingredients <br>for the right food</h1> <br>
+            <img src="images/naxsh.png" alt="image"><br>
+			<a href="#" class="black wow bounceInUp ">BOOK ATABLE</a>
+            <a href="#" class="white wow bounceInUp" id="seeMenu">SEE THE MENU</a>
+		</div>
+	</header>
+    <main>
+        <section class="about" id="about">
+            <div class="inner-about">
+                <div class="inner-about-left">
+                      <h2 class="wow bounceInLeft" data-wow-offset="200">Just the right food</h2>
+                <img src="images/sec1Col1naxsh.png" class="wow zoomIn" data-wow-offset="200" alt="image">
+                <p class="wow flipInY" data-wow-offset="200">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming
+                    back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and
+                    gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+                <img src="images/sec1Col1image.png"  alt="image" style="margin-left:80px">
+
+                </div>
+                <div class="inner-about-right">
+                <img src="images/sec1Col2image.png"  class="wow flipInX" data-wow-offset="200"  alt="image">
+            </div>
+              
+            </div>
+        </section>
+        <section id="ingredients" class="ingredients">
+            <div class="inner-ingredients">
+                <div class="inner-ingredients-block wow flipInX " data-wow-duration="1.2s" data-wow-offset="200"> 
+                    <h2>Fine ingredients</h2>
+                    <img src="images/sec2textnaxsh.png" alt="image">
+                    <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what
+                        keeps our customers coming
+                        back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and
+                        gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+                    <img src="images/sec2bottomimage.png" alt="image" class="inner-ingredients-block-bottom">
+                </div>
+            </div>
+        </section>
+        <section class="menu" id="menu">
+            <div class="inner-menu">
+                <div class="menuGroup1 wow flipInX" data-wow-offset="200">
+                    <h2>Appetisers</h2>
+                    <img src="images/sec1Col1naxsh.png" alt="image">
+                    <p><span>Tzatsiki                                                             <i>$3.99</i></span> <br><br>
+                        Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                    <p><span>Aubergine_Salad                                               <i>$5.50</i></span> <br><br> Pureed
+                        eggplant, garlic, green pepper and tomato dip.</p>
+                    <p><span>Aubergine_Salad                                               <i>$5.25</i></span> <br><br> Pureed
+                        eggplant, garlic, green pepper and tomato dip.</p>
+                </div>
+                <div class="menuGroup2 wow flipInX" data-wow-offset="200">
+                    <h2>Starters</h2>
+                    <img src="images/sec1Col1naxsh.png" alt="image">
+
+                    <p><span>Haloumi                                                            <i>$3.99</i></span> <br><br>
+                        Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                    <p><span>Spinach_Pie                                                     <i>$5.50</i></span> <br><br> Pureed
+                        eggplant, garlic, green pepper and tomato dip.</p>
 
 
-						</ul>
-					</nav>
+                </div>
+                <div class="menuGroup3 wow flipInX" data-wow-offset="200">
+                    <h2>Salads</h2>
+                    <img src="images/sec1Col1naxsh.png" alt="image">
 
-				</div>
-			</div>
-			<div class="getStarted">
-				<div class="inner-getStarted">
-					<h1>Designs your eyeballs will thank you for</h1>
-					<a href="#">Get Started Today</a>
-					<p> Lorem ipsum dolor sit amet.</p>
-				</div>
-			</div>
-		</header>
-		<main>
-			<section class="sec1">
-				<div class="inner-sec1">
-					<div class="block1">
-						<h2>A fantastic heading</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
-					</div>
-					<div class="block2">
-						<h2>Good day blokes</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
-					</div>
-					<div class="block3">
-						<h2>Blaz Robar for president</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
-					</div>
-					<div class="block4">
-						<h2>vote for robar</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
-					</div>
-					
-			</section>
-			<section class="sec2">
-				<div class="inner-sec2">
-					<h2>Wicked & whack, bang bang boo!</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
-					<a href="#">Get Started Today</a>
-				</div>
-			</section>
-			<section class="sec3">
-				
-				<div class="inner-sec3">
-					<div class="sec3img"><img src="images/bg3.jpg" alt="bg3" ></div>
-					<div class="sec3text">
-						<h3>A heading is what you need here
-							Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h3>
-						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste 	
-							natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae 
-							vitae dicta sunt explicabo. </p>
-					</div>
-				</div>	
-			</section>
-			<section class="sec4">
-				<div class="inner-sec4">
-					<h2>Experience the rush today</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit.</p>
-					<a href="#">Get Started Today</a>
-					<p class="small">Lorem ipsum dolor sit amet, consectetur </p>
-				</div>
-			</section>
-			<section class="sec5">
-				<div class="inner-sec5">
-					<a href="#">Photography</a>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-					<div class="person">
-						<img src="images/person.png">
-						<p>Blaz Robar, god like web designer</p>
-					</div>
-				</div>
-			</section>	
-			<section class="sec6">
-				<div class="inner-sec6">
-					
-					<div class="itext">
-						<h2>A heading is what you need here</h2>
-						<h3>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h3>
-						<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </h4>
-					</div>
-					<div class="iwach">
-						<img src="images/bg6.jpg">
-					</div>
-				</div>
-			</section>
-			<section class="sec7">
-				<div class="inner-sec7">
-					<h2>Get in touch</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<h3>help@yomuma.com</h3>
-				</div>
-			</section>
-		</main>
-		<footer class="footer">
-			<div class="inner-footer">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-			</div>
-		</footer>
+                    <p><span>Olive_Special                                                   <i>$5.99</i></span> <br><br>
+                        Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                    <p class="spec"><span><br>Greek_Salad                                                     <i>$5.50</i></span> <br> Pureed
+                        eggplant, garlic, green pepper and tomato dip.</p>
+                    <p><span>Gusto_Salad                                                     <i>$5.25</i></span> <br><br> Pureed
+                        eggplant, garlic, green pepper and tomato dip.</p>
+                </div>
+                <div class="menuGroup4 wow flipInX" data-wow-offset="200">
+                    <h2>Main Dishes</h2>
+                    <img src="images/sec1Col1naxsh.png" alt="image">
+                    <p><span>Cornish_Mackerel                                            <i>$5.99</i></span> <br><br> Refreshing
+                        traditional cucumber and garlic yoghurt dip.</p>
+                    <p class="spec"><span><br>Roast_Lamb                                                     <i>$5.50</i></span>  <br> Pureed
+                        eggplant, garlic, green pepper and tomato dip.</p>
+                    <p><span>Fried_Chicken                                                  <i>$5.25</i></span> <br><br> Pureed
+                        eggplant, garlic, green pepper and tomato dip.</p>
+                    <p><span>Pastitsio                                                            <i>$5.99</i></span> <br><br>
+                        Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <div class="inner-reviews wow zoomIn" data-wow-offset="200">
+                <h2>Guest Reviews</h2>
+                <img src="images/sec2textnaxsh.png" alt="image">
+                <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming
+                    back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and
+                    gourmet coffees make us hard to resist! Stop in today and check us out!
+                    <br>
+                    <span>- food inc, New York</span>
+                </p>
+            </div>
+        </section>
+        <section class="reservation" id="reservation">
+            <div class="inner-reservation">
+                <div class="inner-reservation-left">
+                    <img src="images/sec5image1.png" alt="image" class="s5Image1 wow bounceIn">
+                    <img src="images/sec5image2.png" alt="image" class="wow bounceIn">
+                </div>
+                <div class="inner-reservation-right wow bounceInUp" data-wow-offset="200">
+                    <h2>Just the right food</h2>
+                    <img src="images/sec1Col1naxsh.png" alt="image">
+                    <p>If you’ve been to one of our restaurants, you’ve seen – and tasted what keeps our customers coming
+                        <br>
+                        back for more. Perfect materials and freshly baked food.
+                        <br>
+                        Delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check
+                        us
+                        <br>
+                        out! Perfect materials and freshly baked food.</p>
 
+                    <form action="phormdata.php" >
+                        <div class="formName wow flipInX " data-wow-delay="0.3s" data-wow-offset="200">
+                            <h3>Name</h3>
+                            <input type="text" name="name" placeholder="Enter Name*" id="nam">
+                        </div>
+                        <div class="formSname wow flipInX" data-wow-delay="0.3s" data-wow-offset="200">
+                            <h3>Surname</h3>
+                            <input type="text" placeholder="Enter Surname*" id="surname">
+                        </div>
+                        <div class="formNumber wow flipInX" data-wow-delay="0.3s" data-wow-offset="200">
+                            <h3>Party Number</h3>
+                            <input type="text" placeholder="+374xxxxxx" id="numb">
+                        </div>
+                        <div class="formDate wow flipInX" data-wow-delay="0.3s" data-wow-offset="200">
+                            <h3>Date</h3>
+                            <input name="name" type="date" value="2018-10-10">
+                        </div>
 
+                        <div class="formBookNowButton wow flipInY" data-wow-delay="0.3s" data-wow-offset="200"><input type="submit" value="BOOK NOW!" id="sub"></div>
 
-	</div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="inner-footer wow zoomInLeft" data-wow-offset="-50">
+            <div>
+                <h2>About Us</h2>
+                <img src="images/footerdecor.png" alt="image">
+                <p>Lambda's new and expanded Chelsea location represents a truly authentic Greek patisserie, featuring
+                    breakfasts of fresh croissants and steaming bowls of café.
+                    Lamda the best restaurant in town</p>
+            </div>
+            <div>
+                <h2>Opening Hours</h2>
+                <img src="images/footerdecor.png" alt="image">
+                <p>Mon-Thu: 7:00am-8:00pm <br>
+                    Fri-Sun: 7:00am-10:00p</p>
+                <img src="images/fotterpayments.png" alt="payments">
+            </div>
+            <div>
+                <h2>Our Location</h2>
+                <img src="images/footerdecor.png" alt="image">
+                <p>19th Paradise Street Sitia <br>
+                    128 Meserole Avenue</p>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/fbfooter.png" alt="facebook" title="Share Whit Favebook"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="images/youtubefooter.png" alt="youtube" title="Share Whit Youtube"></a>
+                <a href="https://twitter.com/?lang=ru" target="_blank"><img src="images/twitterfooter.png" alt="twitter" title="Share Whit Twitter"></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img src="images/logofooter4.png" alt="logo" title="Share"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+            new WOW().init();
+    </script>
+    <script src="js/easing.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
