@@ -78,7 +78,7 @@
         </section>
         <section class="menu" id="menu">
             <div class="inner-menu">
-                <div class="menuGroup1 wow flipInX" data-wow-offset="200">
+                <div class="menuGroup1">
                     <h2>Appetisers</h2>
                     <img src="images/sec1Col1naxsh.png" alt="image">
                     <p><span>Tzatsiki                                                             <i>$3.99</i></span> <br><br>
@@ -88,7 +88,7 @@
                     <p><span>Aubergine_Salad                                               <i>$5.25</i></span> <br><br> Pureed
                         eggplant, garlic, green pepper and tomato dip.</p>
                 </div>
-                <div class="menuGroup2 wow flipInX" data-wow-offset="200">
+                <div class="menuGroup">
                     <h2>Starters</h2>
                     <img src="images/sec1Col1naxsh.png" alt="image">
 
@@ -99,7 +99,7 @@
 
 
                 </div>
-                <div class="menuGroup3 wow flipInX" data-wow-offset="200">
+                <div class="menuGroup3">
                     <h2>Salads</h2>
                     <img src="images/sec1Col1naxsh.png" alt="image">
 
@@ -110,7 +110,7 @@
                     <p><span>Gusto_Salad                                                     <i>$5.25</i></span> <br><br> Pureed
                         eggplant, garlic, green pepper and tomato dip.</p>
                 </div>
-                <div class="menuGroup4 wow flipInX" data-wow-offset="200">
+                <div class="menuGroup4">
                     <h2>Main Dishes</h2>
                     <img src="images/sec1Col1naxsh.png" alt="image">
                     <p><span>Cornish_Mackerel                                            <i>$5.99</i></span> <br><br> Refreshing
@@ -154,14 +154,14 @@
                         <br>
                         out! Perfect materials and freshly baked food.</p>
 
-                    <form action="phormdata.php" >
+                    <form action="phormdata.php" method="post" >
                         <div class="formName wow flipInX " data-wow-delay="0.3s" data-wow-offset="200">
                             <h3>Name</h3>
-                            <input type="text" name="name" placeholder="Enter Name*" id="nam">
+                            <input type="text" name="name" placeholder="Enter Name*" id="nam" onblur="validate(event)">
                         </div>
                         <div class="formSname wow flipInX" data-wow-delay="0.3s" data-wow-offset="200">
                             <h3>Surname</h3>
-                            <input type="text" placeholder="Enter Surname*" id="surname">
+                            <input type="text" placeholder="Enter Surname*" id="surname" onblur="validate(event)">
                         </div>
                         <div class="formNumber wow flipInX" data-wow-delay="0.3s" data-wow-offset="200">
                             <h3>Party Number</h3>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="formDate wow flipInX" data-wow-delay="0.3s" data-wow-offset="200">
                             <h3>Date</h3>
-                            <input name="name" type="date" value="2018-10-10">
+                            <input name="date" type="date">
                         </div>
 
                         <div class="formBookNowButton wow flipInY" data-wow-delay="0.3s" data-wow-offset="200"><input type="submit" value="BOOK NOW!" id="sub"></div>

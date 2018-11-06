@@ -1,38 +1,65 @@
-
-
-
 var  nam = document.getElementById('nam');
 var surname = document.getElementById('surname');
 var numb = document.getElementById('numb');
 var regV = /^[A-za-za-z\s]+$/;
 var regN = /^[+]\d{11}$/;
 
-nam.onblur = function () {
 
-    if(regV.test(nam.value)){
-        nam.style.backgroundColor = "#49ff25";
+
+var data = document.getElementsByName("date")[0];
+
+data.onchange = function(){
+    var tari = +data.value.slice(0,4);
+    var amis = +data.value.slice(5,7);
+    var or = +data.value.slice(8,10);
+    var date = new Date();
+    var loctari = +date.getFullYear();
+    var locamis = +date.getMonth() + 1;
+    var locor = +date.getDate();
+
+
+
+  if(tari < loctari){
+        data.style.backgroundColor = "red";
+        return false;
+    }else if(tari == loctari){
+        if(amis < locamis){
+            data.style.backgroundColor = "red";
+            return false;
+        }else if(amis == locamis){
+            if(or < locor){
+                data.style.backgroundColor = "red";
+                return false;
+            }else if(or >= locor){
+                data.style.backgroundColor = "#49ff25";
+            }
+        }else if(amis > locamis){
+            data.style.backgroundColor = "#49ff25";
+
+        }
+    }else if(tari > loctari){
+        data.style.backgroundColor = "#49ff25";
     }
-    else{
-        nam.style.backgroundColor = "red";
-    }
-    if(!nam.value){
-        nam.style.backgroundColor = "#fff";
-    }
+
+
 };
 
 
-surname.onblur = function () {
 
-    if(regV.test(surname.value)){
-        surname.style.backgroundColor = "#49ff25";
+function validate(event){
+    var elem = event.target;
+
+    if(regV.test(elem.value)){
+        elem.style.backgroundColor = "#49ff25";
+    }else{
+        elem.style.backgroundColor = "red";
     }
-    else{
-        surname.style.backgroundColor = "red";
+    if(!elem.value){
+        elem.style.backgroundColor = "#fff";
     }
-    if(!surname.value){
-        surname.style.backgroundColor = "#fff";
-    }
-};
+}
+
+
 
 
 numb.onblur = function () {
@@ -51,6 +78,8 @@ numb.onblur = function () {
 var sub =  document.getElementById('sub');
 
 sub.onclick = function () {
+
+
     if(regV.test(nam.value)){
         nam.style.backgroundColor = "#49ff25";
     }
@@ -90,6 +119,35 @@ sub.onclick = function () {
     }
     if(!numb.value){
         numb.style.backgroundColor = "#fff";
+    }
+    var tari = +data.value.slice(0,4);
+    var amis = +data.value.slice(5,7);
+    var or = +data.value.slice(8,10);
+    var date = new Date();
+    var loctari = +date.getFullYear();
+    var locamis = +date.getMonth() + 1;
+    var locor = +date.getDate();
+
+    if(tari < loctari){
+        data.style.backgroundColor = "red";
+        return false;
+    }else if(tari == loctari){
+        if(amis < locamis){
+            data.style.backgroundColor = "red";
+            return false;
+        }else if(amis == locamis){
+            if(or < locor){
+                data.style.backgroundColor = "red";
+                return false;
+            }else if(or >= locor){
+                data.style.backgroundColor = "#49ff25";
+            }
+        }else if(amis > locamis){
+            data.style.backgroundColor = "#49ff25";
+
+        }
+    }else if(tari > loctari){
+        data.style.backgroundColor = "#49ff25";
     }
 
 };
