@@ -1362,7 +1362,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 /*---------- Footer css Start -------*/
 .prt_footer_wrapper{
 	background-color:#0a0a0a;
-	margin-top:110px;
+	margin-top:160px;
 }
 .prt_footer_wrapper p{
     display: inline-block;
