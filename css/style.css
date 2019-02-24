@@ -1598,7 +1598,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 @media (min-height: 375px) and (max-width:375px){
     .prt_home_wrapper h1{
    
-    top: 0px;
+    top: -40px;
 }
 }
 @media (min-width: 480px) and (max-width: 767px) {
