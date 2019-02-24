@@ -1446,6 +1446,9 @@ input:focus, textarea:focus, select:focus, button:focus {
     .prt_home_wrapper h1{
         margin: 50px 0;
     }
+    .prt_services_wrapper{
+        height: 900px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
 .prt_contact_details_box{
