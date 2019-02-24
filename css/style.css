@@ -118,7 +118,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 2147483647;
+	z-index: 9999999;
 	width: 100%;
 	height: 100%;
 }
@@ -1442,6 +1442,11 @@ input:focus, textarea:focus, select:focus, button:focus {
 	margin:0px;
 }
 }
+@media (max-width: 1024px){
+    .prt_home_wrapper h1{
+        margin: 50px 0;
+    }
+}
 @media (min-width: 768px) and (max-width: 991px) {
 .prt_contact_details_box{
     height: 221px;
@@ -1495,9 +1500,15 @@ input:focus, textarea:focus, select:focus, button:focus {
 	margin:0px;
 }
 }
+@media (max-width: 768px){
+        .prt_home_wrapper h1{
+        top: 0;
+        margin: 0;
+    }
+}
 @media (max-width: 767px) {
 .prt_services_wrapper{
-    height: 120vh;
+    height: 200vh;
 }
 .prt_portfolio_img{
     height: 265px;
@@ -1567,8 +1578,63 @@ input:focus, textarea:focus, select:focus, button:focus {
     margin-left: 0px;
 }
 }
-@media (min-width: 480px) and (max-width: 767px) {}
+@media (min-height: 375px){
+    .prt_home_wrapper h1{
+   
+    top: -100px;
+}
+.prt_counter_box p{
+    margin-left: 120px;
+    margin-top: 5px;
+}
+.prt_counter_box img{
+    width:90px;
+    padding: 0 0 20px;
+}
+.prt_portfolio_box>div{
+    margin-bottom: 10px;
+}
+}
+@media (min-height: 375px) and (max-width:375px){
+    .prt_home_wrapper h1{
+   
+    top: 0px;
+}
+}
+@media (min-width: 480px) and (max-width: 767px) {
+
+    .prt_menu_wrapper a.prt_left{
+    left: -55px;
+}
+.prt_menu_wrapper a.prt_right{
+    right: -40px;
+}
+.prt_home_wrapper h1{
+    left: -15px;
+}
+
+.prt_home_wrapper h1{
+    font-size: 50px;
+    top: -60px;
+}
+
+}
+
+
+
 @media (max-width: 479px) {
+.prt_menu_wrapper a.prt_left{
+    left: -55px;
+}
+.prt_menu_wrapper a.prt_right{
+    right: -40px;
+}
+.prt_home_wrapper h1{
+    left: -15px;
+}
+.data-mr-auto{
+    margin: 75px auto!important;
+}
 .prt_services_slider_imgs {
     margin-left: 0px;
 }
@@ -1622,6 +1688,26 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 }
 
+@media (max-width: 375px){
+    .prt_home_wrapper h1{
+        font-size: 46px;
+    }
+    .prt_contact_map iframe{
+        height: 265px;
+    }
+}
+
+@media (max-width: 320px){
+    .data-mr-auto{
+        margin: 0 auto!important;
+    }
+    .prt_home_wrapper h1{
+        top: 20px;
+    }
+}
+
+
+
 a.imageopen{
     display: inline;
     margin: 0;
@@ -1647,4 +1733,11 @@ a.linkTo{
 
 a.linkTo:hover{
     color: #f6483b;
+}
+
+
+
+.data-mr-auto{
+    margin: 0 auto;
+    float: none;
 }
