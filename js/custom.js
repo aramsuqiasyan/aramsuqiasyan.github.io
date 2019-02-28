@@ -20,7 +20,8 @@ Assigned to: ThemeForest
 	
 	//bg window height Js
 	var window_height = window.innerHeight;
-		$(".prt_home_wrapper").css("height", window_height);
+		// $(".prt_home_wrapper").css("height", window_height);
+		$(".prt_home_wrapper").css("height", '100vh');
 	
 	//Portfolio Load More
 	$(".prt_loadmore").slice(0, 3).show();

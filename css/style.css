@@ -123,6 +123,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 	height: 100%;
 }
 #status {
+    width: 20%;
     background-position: center center;
     background-repeat: no-repeat;
     height: auto;
