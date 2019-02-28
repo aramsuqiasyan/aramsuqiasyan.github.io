@@ -4,7 +4,40 @@
 Project: Portfolio Responsive HTML Template
 Version: 1.0.0
 Assigned to: ThemeForest
+
+
+
+
 -------------------------------------------------------------------*/
+// audio
+var audi = $('#audio')[0];
+var Pause = $('#Pause');
+var Play =$('#Play');
+
+Pause.click(function(){
+	audi.pause();
+	console.log(Play);
+	console.log(Pause);
+});
+
+Play.click(function(){
+	audi.play();
+	console.log(Play);
+	console.log(Pause);
+});
+
+
+
+// playPause.click(function(){
+// 	e.preventDefault();
+//    var audi = $('#audio');
+//     $.each($('audio'), function () {
+//     $(this).stop();
+// });});
+
+
+
+
 (function($){
   "use strict";
 	

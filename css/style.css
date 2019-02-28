@@ -1,3 +1,15 @@
+#playPause{
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    z-index: 99999999;
+}
+
+
+#playPause:hover{
+    cursor: pointer;
+}
+
 /*--------- Body Strat -------*/
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -373,16 +385,16 @@ input:focus, textarea:focus, select:focus, button:focus {
     font-size: 150px;
     color: #ffffff;
     font-weight: bold;
-    background: url(../images/content/bannerText.png);
-    background-repeat: repeat-x;
+    background: url(../images/content/h01.gif);
+    background-repeat: repeat;
     background-position: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: cover;
+    background-size: 149px;
     z-index: 1;
     text-align: center;
     margin-top: 10%;
-    animation: trans 22s alternate infinite ease-in-out;
+    animation: trans 10s alternate infinite cubic-bezier(1,-0.66,.83,.67);
 }
 .prt_logo_wrapper img{
     position: fixed;
