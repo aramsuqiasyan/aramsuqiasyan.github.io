@@ -12,19 +12,18 @@ Assigned to: ThemeForest
 // audio
 var audi = $('#audio')[0];
 var Pause = $('#Pause');
-var Play =$('#Play');
+var Play = $('#Play');
 
 Pause.click(function(){
 	audi.pause();
-	console.log(Play);
-	console.log(Pause);
+
 });
 
 Play.click(function(){
 	audi.play();
-	console.log(Play);
-	console.log(Pause);
+
 });
+
 
 
 
@@ -43,8 +42,10 @@ Play.click(function(){
 	
 	// Preloader Js
 	jQuery(window).on('load', function() {
+document.getElementById('audio').play();
 		jQuery("#status").fadeOut();
 		jQuery("#preloader").delay(200).fadeOut("slow");
+
 	});
 	
 	// ready function
