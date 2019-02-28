@@ -394,7 +394,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     z-index: 1;
     text-align: center;
     margin-top: 10%;
-    animation: trans 10s alternate infinite cubic-bezier(1,-0.66,.83,.67);
+    animation: trans 10s alternate infinite cubic-bezier(1, -0.66, 0, 2.82);;
 }
 .prt_logo_wrapper img{
     position: fixed;
