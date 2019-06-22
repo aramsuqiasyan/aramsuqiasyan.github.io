@@ -1,48 +1,8 @@
-/*--------------------- Copyright (c) 2018 -----------------------
-[Master Javascript]
-
-Project: Portfolio Responsive HTML Template
-Version: 1.0.0
-Assigned to: ThemeForest
-
-
-
-
--------------------------------------------------------------------*/
-// audio
-var audi = $('#audio')[0];
-var Pause = $('#Pause');
-var Play = $('#Play');
-
-Pause.click(function(){
-	audi.pause();
-
-});
-
-Play.click(function(){
-	audi.play();
-
-});
-
-
-
-
-// playPause.click(function(){
-// 	e.preventDefault();
-//    var audi = $('#audio');
-//     $.each($('audio'), function () {
-//     $(this).stop();
-// });});
-
-
-
-
 (function($){
   "use strict";
 	
 	// Preloader Js
 	jQuery(window).on('load', function() {
-document.getElementById('audio').play();
 		jQuery("#status").fadeOut();
 		jQuery("#preloader").delay(200).fadeOut("slow");
 
