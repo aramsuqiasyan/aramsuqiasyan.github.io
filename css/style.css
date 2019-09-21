@@ -1170,6 +1170,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    object-fit: contain;
 }
 .prt_services_slider_text img{
 	display:inline-block;
@@ -1180,6 +1181,8 @@ input:focus, textarea:focus, select:focus, button:focus {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    object-fit: contain;
+
 }
 .prt_services_slider_text h4{
 	text-transform:capitalize;
