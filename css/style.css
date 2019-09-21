@@ -1472,6 +1472,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 	text-transform:uppercase;
 	color:#000000;
 	margin-top:0px;
+    text-align:center;
 }
 .prt_portfolio_text p{
 	margin:0px;
