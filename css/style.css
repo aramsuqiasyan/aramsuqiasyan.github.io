@@ -1431,6 +1431,8 @@ input:focus, textarea:focus, select:focus, button:focus {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    height: 100%;
+    object-fit: cover;
 }
 .prt_portfolio_img:hover img{
 	display:inline-block;
