@@ -360,8 +360,9 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_home_wrapper{
 	position:relative;
 	overflow-y:auto;
-    padding: 200px 0px;
-    /*height: 100vh!important;*/
+    display:flex;
+    justify-content: center;
+    align-items:center; 
 }
 .prt_home_wrapper:after {
     content: "";
@@ -380,8 +381,6 @@ input:focus, textarea:focus, select:focus, button:focus {
     z-index: 0;	
 }
 .prt_home_wrapper h1{
-    position: absolute;
-    top: 50%;
     font-size: 150px;
     color: #ffffff;
     font-weight: bold;
@@ -391,9 +390,8 @@ input:focus, textarea:focus, select:focus, button:focus {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 149px;
-    z-index: 1;
+    z-index: 999999;
     text-align: center;
-    margin-top: 10%;
     animation: trans 10s alternate infinite cubic-bezier(1, -0.66, 0, 2.82);;
 }
 .prt_logo_wrapper img{
@@ -1631,7 +1629,6 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 @media (max-width: 768px){
         .prt_home_wrapper h1{
-        top: 0;
         margin: 0;
     }
 }
@@ -1707,11 +1704,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     margin-left: 0px;
 }
 }
-@media (min-height: 375px){
-    .prt_home_wrapper h1{
-   
-    top: -100px;
-}
+
 .prt_counter_box p{
     margin-left: 120px;
     margin-top: 5px;
@@ -1758,9 +1751,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_menu_wrapper a.prt_right{
     right: -40px;
 }
-.prt_home_wrapper h1{
-    left: -15px;
-}
+
 .data-mr-auto{
     margin: 75px auto!important;
 }
@@ -1816,6 +1807,11 @@ input:focus, textarea:focus, select:focus, button:focus {
     height: 900px;
 }
 }
+@media (max-height: 500px){
+    .prt_home_wrapper h1{
+        font-size: 60px;
+    }
+}
 
 @media (max-width: 375px){
     .prt_home_wrapper h1{
@@ -1830,10 +1826,10 @@ input:focus, textarea:focus, select:focus, button:focus {
     .data-mr-auto{
         margin: 0 auto!important;
     }
-    .prt_home_wrapper h1{
-        top: 20px;
-    }
 }
+
+
+
 
 
 
