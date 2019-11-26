@@ -209,6 +209,7 @@ $(document).ready(function(){
 	setTimeout(function(){
 		var santa = $('#santa');
 		var music = document.getElementById('music');
+		document.body.focus();
 		    music.play();
 		
 		santa.addClass('comming')
