@@ -1,3 +1,32 @@
+.santa{
+    width: 300px;
+    position: fixed;
+    z-index: 99;
+    width: 300px;
+    position: fixed;
+    z-index: 99;
+    top: 120px;
+    right: -100vw;
+}
+
+.santa.comming{
+    animation: commitgSanta 10s;
+}
+
+
+@keyframes commitgSanta{
+  from{
+    right: -100vw;
+  }
+  to{
+    right: 100vw
+  }
+}
+
+.santa img{
+  width: 100%;
+}
+
 #playPause{
     position: absolute;
     top: 20px;
@@ -16,7 +45,7 @@ body {
 	font-size: 15px;
 	line-height: 1.5;
 	color: #b7b7b7;
-	background:url('../images/bg.jpg');
+	background:url('../images/c4.jpg');
     background-position: center;
     background-size: cover;
 	-webkit-font-smoothing: antialiased;
@@ -147,113 +176,9 @@ input:focus, textarea:focus, select:focus, button:focus {
     -ms-transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
-}
-
-/* LOADER 6 */
-
-#loader-6{
-  justify-content:center;
-  align-items:center;
-  width:100vw;
-  height:100vh;
-  display:flex;
-}
-
-#loader-6 span{
-  margin:2px;
-  display: inline-block;
-  width: 3px;
-  height: 20px;
-  background-color: #3498db;
-}
-
-#loader-6 span:nth-child(1){
-  animation: grow 1s ease-in-out infinite;
-}
-
-#loader-6 span:nth-child(2){
-  animation: grow 1s ease-in-out 0.05s infinite;
-}
-
-#loader-6 span:nth-child(3){
-  animation: grow 1s ease-in-out 0.10s infinite;
-}
-
-#loader-6 span:nth-child(4){
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-#loader-6 span:nth-child(5){
-  animation: grow 1s ease-in-out 0.20s infinite;
-}
-#loader-6 span:nth-child(6){
-  animation: grow 1s ease-in-out 0.25s infinite;
-}
-
-#loader-6 span:nth-child(7){
-  animation: grow 1s ease-in-out 0.30s infinite;
-}
-#loader-6 span:nth-child(8){
-  animation: grow 1s ease-in-out 0.35s infinite;
-}
-#loader-6 span:nth-child(9){
-  animation: grow 1s ease-in-out 0.40s infinite;
-}
-#loader-6 span:nth-child(10){
-  animation: grow 1s ease-in-out 0.45s infinite;
-}
-#loader-6 span:nth-child(11){
-  animation: grow 1s ease-in-out 0.50s infinite;
-}
-#loader-6 span:nth-child(12){
-  animation: grow 1s ease-in-out 0.55s infinite;
-}
-#loader-6 span:nth-child(13){
-  animation: grow 1s ease-in-out 0.60s infinite;
-}
-#loader-6 span:nth-child(14){
-  animation: grow 1s ease-in-out 0.65s infinite;
-}
-#loader-6 span:nth-child(15){
-  animation: grow 1s ease-in-out 0.70s infinite;
-}
-#loader-6 span:nth-child(16){
-  animation: grow 1s ease-in-out 0.75s infinite;
-}
-#loader-6 span:nth-child(17){
-  animation: grow 1s ease-in-out 0.80s infinite;
-}
-#loader-6 span:nth-child(18){
-  animation: grow 1s ease-in-out 0.85s infinite;
-}
-#loader-6 span:nth-child(19){
-  animation: grow 1s ease-in-out 0.90s infinite;
-}
-#loader-6 span:nth-child(20){
-  animation: grow 1s ease-in-out 0.95s infinite;
-}
-#loader-6 span:nth-child(odd){
-  background-color: #4b82b4;
-}
-#loader-6 span:nth-child(even){
-  background-color: #a3223e;
-}
-
-
-@keyframes grow{
-  0%, 100%{
-    -webkit-transform: scaleY(1);
-    -ms-transform: scaleY(1);
-    -o-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-
-  50%{
-    -webkit-transform: scaleY(1.8);
-    -ms-transform: scaleY(1.8);
-    -o-transform: scaleY(1.8);
-    transform: scaleY(1.8);
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*---------- Heading Css Start -------*/
@@ -389,10 +314,11 @@ input:focus, textarea:focus, select:focus, button:focus {
     background-position: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 149px;
+    background-size: 170px;
     z-index: 999999;
+    background-position-y: -60px;
     text-align: center;
-    animation: trans 10s alternate infinite cubic-bezier(1, -0.66, 0, 2.82);;
+    filter: drop-shadow(0 -2px 2px #fff);
 }
 .prt_logo_wrapper img{
     position: fixed;
@@ -407,16 +333,6 @@ input:focus, textarea:focus, select:focus, button:focus {
   -o-animation: rotate 2s linear infinite;
   -ms-animation: rotate 2s linear infinite;
   animation: rotate 2s linear infinite;
-}
-
-@keyframes trans {
-    0%{
-        background-position: -180px;
-    }
-
-  100% {
-        background-position: 170px;
-    }
 }
 
 
@@ -509,7 +425,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- About css Start -------*/
 .prt_about_wrapper{
-    background:url('../images/bgAbout.jpg'); 
+    background:url('../images/c2.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -891,7 +807,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- Contact Page css Start -------*/
 .prt_contact_wrapper{
-    background:url('../images/bgContact.jpg'); 
+    background:url('../images/c1.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1053,7 +969,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- Services css Start -------*/
 .prt_services_wrapper{
-    background:url('../images/bgStrength.jpg'); 
+    background:url('../images/c5.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1360,7 +1276,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- Portfolio css Start -------*/
 .prt_portfolio_wrapper{
-    background:url('../images/bgPortfolio.jpg');
+    background:url('../images/c3.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

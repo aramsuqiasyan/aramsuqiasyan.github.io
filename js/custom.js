@@ -204,3 +204,14 @@
 	});
 	
 })();
+
+$(document).ready(function(){
+	setTimeout(function(){
+		var santa = $('#santa');
+		var music = document.getElementById('music');
+		    music.play();
+		
+		santa.addClass('comming')
+
+	},5000)
+})
