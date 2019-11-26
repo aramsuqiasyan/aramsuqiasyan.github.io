@@ -206,13 +206,37 @@
 })();
 
 $(document).ready(function(){
-	setTimeout(function(){
-		var santa = $('#santa');
-		var music = document.getElementById('music');
-		document.body.focus();
-		    music.play();
-		
-		santa.addClass('comming')
+	var canTouch = true;
+	
+	$(document).click(function(){
+		if(canTouch){
+			canTouch = false;
+			var id = setTimeout(function(){
+				var santa = $('#santa');
+				var music = document.getElementById('music');
+				var music2 = document.getElementById('music2');
+				    music.play()
+				    	.then(()=>{
+				    		clearTimeout(id);
+				    	})
+				    music2.play()
+				santa.addClass('comming')
 
-	},5000)
+			},5000)
+		}
+	})
+
+
+	var rabizBtn = $("#rabizSantaBtn");
+	rabizBtn.click(function(){
+		var santa = $('#santa');
+		var music3 = document.getElementById('music3');
+		var music2 = document.getElementById('music2');
+		    music3.play()
+		    music2.play()
+		santa.addClass('commingRabiz')
+		setTimeout(()=>{
+			santa.removeClass('commingRabiz')
+		},17000)
+	})
 })

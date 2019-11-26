@@ -1,3 +1,11 @@
+.rabizSantaBtn{
+  position: fixed;
+  right: 0;
+  top:0;
+  opacity: 0;
+  z-index: 999 
+}
+
 .santa{
     width: 300px;
     position: fixed;
@@ -11,7 +19,12 @@
 }
 
 .santa.comming{
-    animation: commitgSanta 10s;
+    animation: commitgSanta 7s cubic-bezier(0,.87,.9,.29);
+}
+.santa.commingRabiz{
+  transform: scale(-1,1);
+  top: 50%;
+  animation: commitgSantaRabiz 17s cubic-bezier(.69,.15,.95,.62);
 }
 
 
@@ -21,6 +34,15 @@
   }
   to{
     right: 100vw
+  }
+}
+
+@keyframes commitgSantaRabiz{
+  from{
+    right: 100vw;
+  }
+  to{
+    right: -100vw
   }
 }
 
