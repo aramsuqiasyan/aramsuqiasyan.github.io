@@ -227,8 +227,7 @@ $(document).ready(function(){
 	})
 
 
-	var rabizBtn = $("#rabizSantaBtn");
-	rabizBtn.click(function(){
+	$(document).on('dblclick',function(){
 		var santa = $('#santa');
 		var music3 = document.getElementById('music3');
 		var music2 = document.getElementById('music2');
