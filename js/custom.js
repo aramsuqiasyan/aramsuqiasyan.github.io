@@ -225,17 +225,4 @@ $(document).ready(function(){
 			},5000)
 		}
 	})
-
-
-	$(document).on('dblclick',function(){
-		var santa = $('#santa');
-		var music3 = document.getElementById('music3');
-		var music2 = document.getElementById('music2');
-		    music3.play()
-		    music2.play()
-		santa.addClass('commingRabiz')
-		setTimeout(()=>{
-			santa.removeClass('commingRabiz')
-		},17000)
-	})
 })
