@@ -25,7 +25,7 @@
     $("#loadMore").on("click", function(e) {
       e.preventDefault();
       $(".prt_loadmore:hidden")
-        .slice(0, 5)
+        .slice(0, 3)
         .slideDown();
       if ($(".prt_loadmore:hidden").length == 0) {
         $("#load").fadeOut("slow");
@@ -79,10 +79,10 @@
       });
       var circle3 = Circles.create({
         id: "circles-3",
-        value: 85,
+        value: 100,
         radius: 100,
-        number: 85,
-        text: "85%",
+        number: 100,
+        text: "100%",
         width: 8,
         colors: ["#202020", "#efd81d"],
         duration: 900
