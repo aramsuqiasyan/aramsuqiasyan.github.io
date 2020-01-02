@@ -1,52 +1,10 @@
-.santa{
-    width: 300px;
-    position: fixed;
-    z-index: 99;
-    width: 300px;
-    position: fixed;
-    z-index: 99;
-    top: 120px;
-    right: -100vw;
-    pointer-events: none;
-}
-
-.santa.comming{
-    animation: commitgSanta 7s cubic-bezier(0,.87,.9,.29);
-}
-
-@keyframes commitgSanta{
-  from{
-    right: -100vw;
-  }
-  to{
-    right: 100vw
-  }
-}
-
-
-.santa img{
-  width: 100%;
-}
-
-#playPause{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 99999999;
-}
-
-
-#playPause:hover{
-    cursor: pointer;
-}
-
 /*--------- Body Strat -------*/
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
 	line-height: 1.5;
 	color: #b7b7b7;
-	background:url('../images/c4.jpg');
+	background:url('../images/bg.jpg');
     background-position: center;
     background-size: cover;
 	-webkit-font-smoothing: antialiased;
@@ -153,35 +111,82 @@ input:focus, textarea:focus, select:focus, button:focus {
 	padding:120px 0px;
 }
 /*---------- Preloader Css Start -------*/
-#preloader {
-	background-color: #000000;
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 9999999;
-	width: 100%;
-	height: 100%;
-}
-#status {
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+  perspective-origin: top;
+  background-image: linear-gradient(to right, rgb(0, 0, 70), rgb(28, 181, 224));
+  z-index: 999999999;
 }
 
+.loader_img {
+  width: 200px;
+  box-shadow: 10px 5px 10px #111;
+  transform: rotateX(90deg);
+  position: absolute;
+  transform-origin: left;
+}
+.loader_img:nth-child(1) {
+  animation: anim_logo 4s 1s infinite;
+}
+
+.loader_img:nth-child(2) {
+  animation: anim_logo 4s 0.8s infinite;
+}
+.loader_img:nth-child(3) {
+  animation: anim_logo 4s 0.6s infinite;
+}
+.loader_img:nth-child(4) {
+  animation: anim_logo 4s 0.4s infinite;
+}
+.loader_img:nth-child(5) {
+  animation: anim_logo 4s 0.3s infinite;
+}
+.loader_img:nth-child(6) {
+  animation: anim_logo 4s infinite;
+}
+
+@keyframes anim_logo {
+  from {
+    transform: rotateX(90deg) rotateY(-180deg) translateZ(1px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateX(90deg) rotateY(0);
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    transform: rotateX(90deg) rotateY(-180deg) translateZ(1px);
+  }
+}
+
+.loader_text {
+  position: absolute;
+  bottom: 50px;
+  font-size: 25px;
+  color: var(--ultra);
+  border-right: 2px solid var(--ultra);
+  padding-right: 5px;
+  overflow: hidden;
+  font-weight: bold;
+  animation: cursor_blink 0.3s infinite alternate;
+}
+
+@keyframes cursor_blink {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: var(--ultra);
+  }
+}
 /*---------- Heading Css Start -------*/
 .prt_heading_wrapper{
 	text-align:center;
@@ -322,6 +327,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     filter: drop-shadow(0 -2px 2px #fff);
 }
 .prt_logo_wrapper img{
+    width: 50px;
     position: fixed;
     left: 50px;
     top: 50px;
@@ -426,7 +432,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- About css Start -------*/
 .prt_about_wrapper{
-    background:url('../images/c2.jpg'); 
+    background:url('../images/bgAbout.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -808,7 +814,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- Contact Page css Start -------*/
 .prt_contact_wrapper{
-    background:url('../images/c1.jpg'); 
+    background:url('../images/bgContact.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -970,7 +976,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- Services css Start -------*/
 .prt_services_wrapper{
-    background:url('../images/c5.jpg'); 
+    background:url('../images/bgStrength.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1277,7 +1283,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- Portfolio css Start -------*/
 .prt_portfolio_wrapper{
-    background:url('../images/c3.jpg');
+    background:url('../images/bgPortfolio.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
