@@ -110,6 +110,10 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_padderboth120{
 	padding:120px 0px;
 }
+
+.shadow{
+    box-shadow:0 4px 15px #111;
+}
 /*---------- Preloader Css Start -------*/
 .loader {
   position: fixed;
@@ -129,9 +133,8 @@ input:focus, textarea:focus, select:focus, button:focus {
 .loader_img {
   width: 200px;
   box-shadow: 10px 5px 10px #111;
-  transform: rotateX(90deg);
+  transform: rotateX(90deg) translateX(50%);
   position: absolute;
-  transform-origin: left;
 }
 .loader_img:nth-child(1) {
   animation: anim_logo 4s 1s infinite;
@@ -155,15 +158,15 @@ input:focus, textarea:focus, select:focus, button:focus {
 
 @keyframes anim_logo {
   from {
-    transform: rotateX(90deg) rotateY(-180deg) translateZ(1px);
+    transform: rotateX(90deg) rotateY(-180deg) translateZ(1px) translateX(50%);
   }
   50% {
     opacity: 0.5;
-    transform: rotateX(90deg) rotateY(0);
+    transform: rotateX(90deg) rotateY(0) translateX(50%);
     filter: hue-rotate(360deg);
   }
   100% {
-    transform: rotateX(90deg) rotateY(-180deg) translateZ(1px);
+    transform: rotateX(90deg) rotateY(-180deg) translateZ(1px) translateX(50%);
   }
 }
 
@@ -229,7 +232,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     position: absolute;
     right: 0;
     bottom: -10px;
-	color:#f6483b;
+	color:#764abc;
     font-weight: 500;
 }
 .prt_heading_wrapper_2{
@@ -253,8 +256,8 @@ input:focus, textarea:focus, select:focus, button:focus {
     display: inline-block;
 	text-align:center;
 	text-transform:capitalize;
-	background-color:#f6483b;
-	border:1px solid #f6483b;
+	background-color:#764abc;
+	border:1px solid #764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -262,9 +265,9 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_btn:hover, .prt_btn:focus{
-    color: #f6483b;
+    color: #764abc;
     background-color: #111111;
-	border:1px solid #f6483b;
+	border:1px solid #764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -518,7 +521,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .prt_about_learnbox_right:hover:after{
 	background-color: #ffffff;
-    border: 3px solid #f6483b;
+    border: 3px solid #764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -556,7 +559,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .prt_about_learnbox_left:hover:after{
 	background-color: #ffffff;
-    border: 3px solid #f6483b;
+    border: 3px solid #764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -564,7 +567,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_about_learnbox_right:hover .prt_about_learnbox_year h1{
-	color:#f6483b;
+	color:#764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -572,7 +575,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_about_learnbox_left:hover .prt_about_learnbox_year h1{
-	color:#f6483b;
+	color:#764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -694,7 +697,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_about_experiencebox:hover .prt_about_experience_year h1{
-	color:#f6483b;
+	color:#764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -958,7 +961,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_contact_details_box p a:hover{
-	color:#f6483b;
+	color:#764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1188,8 +1191,9 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .circles-text {
 	font-size: 36px !important;
-	color:#000000;
+	color:#fff;
 	font-weight:500;
+    text-shadow: 0 0 2px black, 0 0 7px black;
 }
 #canvas{
 	display:inline-block;
@@ -1230,6 +1234,34 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 #circles-4{
 	background-image:url(../images/content/progress_4.png);
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+#circles-5{
+	background-image:url(../images/content/progress_5.png);
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+#circles-6{
+	background-image:url(../images/content/progress_6.png);
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+#circles-7{
+	background-image:url(../images/content/progress_7.png);
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+#circles-8{
+	background-image:url(../images/content/progress_8.png);
 	border-radius: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1428,7 +1460,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_footer_wrapper p a:hover{
-	color:#f6483b;
+	color:#764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1468,7 +1500,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .prt_footer_wrapper ul li a:hover{
 	color:#ffffff;
-	background-color:#f6483b;
+	background-color:#764abc;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1780,7 +1812,7 @@ a.linkTo{
 
 
 a.linkTo:hover{
-    color: #f6483b;
+    color: #764abc;
 }
 
 

@@ -32,11 +32,6 @@
       }
     });
 
-    // for counter
-    $(".timer").appear(function() {
-      $(this).countTo();
-    });
-
     // About Page Profile Slider Js
     $(".prt_profile_slider .owl-carousel").owlCarousel({
       loop: true,
@@ -53,50 +48,6 @@
           items: 3
         }
       }
-    });
-
-    //Skills Charts
-    $(".prt_skills_wrapper").appear(function() {
-      var circle1 = Circles.create({
-        id: "circles-1",
-        value: 80,
-        radius: 100,
-        number: 80,
-        text: "80%",
-        width: 8,
-        colors: ["#202020", "#00c8ff"],
-        duration: 900
-      });
-      var circle2 = Circles.create({
-        id: "circles-2",
-        value: 95,
-        radius: 100,
-        number: 95,
-        text: "95%",
-        width: 8,
-        colors: ["#202020", "#e96227"],
-        duration: 900
-      });
-      var circle3 = Circles.create({
-        id: "circles-3",
-        value: 100,
-        radius: 100,
-        number: 100,
-        text: "100%",
-        width: 8,
-        colors: ["#202020", "#efd81d"],
-        duration: 900
-      });
-      var circle4 = Circles.create({
-        id: "circles-4",
-        value: 90,
-        radius: 100,
-        number: 90,
-        text: "90%",
-        width: 8,
-        colors: ["#202020", "#583e80"],
-        duration: 900
-      });
     });
 
     // Service Page Client Slider Js
@@ -148,6 +99,7 @@
 
       fixedContentPos: false
     });
+    
 
     // Service Page Image Slides Js
     $("div.prt_img_click").on("click", function() {
@@ -191,7 +143,6 @@
     $("img.prt_close").on("click", function() {
       hide_section();
     });
-
     $("img#prt_close_tab").on("click", function() {
       hide_section();
     });
@@ -210,11 +161,108 @@
       }, timing);
       targetSection.animate(AplCss, timing);
     }
+    var circleFirstOpen  = true;
+    var countFirstOpen  = true;
+    $('.prt_main_wrapper').scroll(function(){
+        //Skills Charts
+        var canvasOffsetTop = $('#canvas').scrollTop();
+        var countOffsetTop = $('.prt_couter_wrapper').scrollTop();
+        if($(this).scrollTop() > canvasOffsetTop + 200 && circleFirstOpen){
+          circleFirstOpen = false;
+          var circle1 = Circles.create({
+            id: "circles-1",
+            value: 80,
+            radius: 100,
+            number: 80,
+            text: "80%",
+            width: 8,
+            colors: ["#202020", "#00c8ff"],
+            duration: 900
+          });
+          var circle2 = Circles.create({
+            id: "circles-2",
+            value: 95,
+            radius: 100,
+            number: 95,
+            text: "95%",
+            width: 8,
+            colors: ["#202020", "#e96227"],
+            duration: 900
+          });
+          var circle3 = Circles.create({
+            id: "circles-3",
+            value: 100,
+            radius: 100,
+            number: 100,
+            text: "100%",
+            width: 8,
+            colors: ["#202020", "#efd81d"],
+            duration: 900
+          });
+          var circle4 = Circles.create({
+            id: "circles-4",
+            value: 90,
+            radius: 100,
+            number: 90,
+            text: "90%",
+            width: 8,
+            colors: ["#202020", "#583e80"],
+            duration: 900
+          });
+          var circle5 = Circles.create({
+            id: "circles-5",
+            value: 90,
+            radius: 100,
+            number: 90,
+            text: "80%",
+            width: 8,
+            colors: ["#202020", "red"],
+            duration: 900
+          });
+          var circle6 = Circles.create({
+            id: "circles-6",
+            value: 90,
+            radius: 100,
+            number: 90,
+            text: "80%",
+            width: 8,
+            colors: ["#202020", "#61dbfb"],
+            duration: 900
+          });
+          var circle7 = Circles.create({
+            id: "circles-7",
+            value: 90,
+            radius: 100,
+            number: 90,
+            text: "85%",
+            width: 8,
+            colors: ["#202020", "#de0e8d"],
+            duration: 900
+          });
+          var circle8 = Circles.create({
+            id: "circles-8",
+            value: 90,
+            radius: 100,
+            number: 90,
+            text: "80%",
+            width: 8,
+            colors: ["#202020", "#4998d7"],
+            duration: 900
+          });
+        }
+
+        if($(this).scrollTop() > countOffsetTop && countFirstOpen){
+          countFirstOpen = false;
+          // for counter
+          $(".timer").appear(function() {
+            $(this).countTo();
+          });
+        }
+    })
+
+    //   Loader
+    let loader = $("#loader");
+    loader.fadeOut(1000);
+    //   Loader
   });
 })();
-$(document).ready(function() {
-  //   Loader
-  let loader = $("#loader");
-  loader.fadeOut(1000);
-  //   Loader
-});
