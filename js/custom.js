@@ -253,6 +253,7 @@
 
         if($(this).scrollTop() > countOffsetTop && countFirstOpen){
           countFirstOpen = false;
+          $('.prt_main_wrapper').trigger('click')
           // for counter
           $(".timer").appear(function() {
             $(this).countTo();
