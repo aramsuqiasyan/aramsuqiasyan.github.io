@@ -247,6 +247,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     line-height: 50px;
     color: #ffffff;
     font-size: 15px;
+    background-color: transparent;
     font-weight: 400;
     border-radius: 0px;
     padding: 0 20px;
@@ -256,23 +257,45 @@ input:focus, textarea:focus, select:focus, button:focus {
     display: inline-block;
 	text-align:center;
 	text-transform:capitalize;
-	background-color:#764abc;
-	border:1px solid #764abc;
-	-webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    transition: 0.3s .5s background-color,.3s .5s box-shadow;
+    box-sizing: border-box;
+    position: relative;
+    border: none;
+}
+
+.prt_btn::after{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #764abc;
+    border-left: 2px solid #764abc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .5s ease-in-out all;
+}
+
+.prt_btn::before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #764abc;
+    border-right: 2px solid #764abc;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition:.5s ease-in-out all;
+}
+.prt_btn:hover:before,.prt_btn:hover:after{
+    width: 100%;
+    height: 100%;
 }
 .prt_btn:hover, .prt_btn:focus{
-    color: #764abc;
-    background-color: #111111;
-	border:1px solid #764abc;
-	-webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    color: #ffffff;
+    background-color: #764abc;
+    box-shadow: 0 0 50px #8e61d8;
 }
 /*---------- Typography css End -------*/
 /*---------- Main Wrapper css Start -------*/
@@ -908,6 +931,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    -webkit-box-reflect: below 0 linear-gradient(transparent 40%,#ffffff);
 }
 .prt_contact_details_box:hover{
 	-webkit-transition: all 0.3s;
@@ -915,11 +939,11 @@ input:focus, textarea:focus, select:focus, button:focus {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-	-webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+	-webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 .prt_contact_details_box:after{
 	content:"";
@@ -1315,7 +1339,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 /*---------- Portfolio css Start -------*/
 .prt_portfolio_wrapper{
-    background:url('../images/bgPortfolio.jpg');
+    background:url('../images/bgPortfolio.jpg') #101010;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1326,10 +1350,43 @@ input:focus, textarea:focus, select:focus, button:focus {
     top: 0;
     z-index: 1;
     display: none;
+    background-blend-mode: overlay;
 }
 .prt_loadmore{
 	display:none;
 }
+.prt_portfolio_box > div{
+    position: relative;
+}
+.prt_portfolio_box > .prt_loadmore:not(.prt_btn)::after{
+    content: '';
+    top: -2px;
+    left: 13px;
+    right: 13px;
+    bottom: 4px;
+    position: absolute;
+}
+
+.prt_portfolio_box > .prt_loadmore:not(.prt_btn)::before{
+    content: '';
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    filter: blur(40px);
+}
+
+.prt_portfolio_box > .prt_loadmore:nth-child(even)::after,
+.prt_portfolio_box > .prt_loadmore:nth-child(even)::before{
+    background: linear-gradient(235deg, #ff00c8, #010615,#bfd400);
+}
+
+.prt_portfolio_box > .prt_loadmore:nth-child(odd)::after,
+.prt_portfolio_box > .prt_loadmore:nth-child(odd)::before{
+    background: linear-gradient(235deg, #c300ff, #010615,#006dd4);
+}
+
 .prt_portfolio_box{
 	display:inline-block;
 	width:100%;
