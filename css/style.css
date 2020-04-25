@@ -257,7 +257,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     display: inline-block;
 	text-align:center;
 	text-transform:capitalize;
-    transition: 0.3s .5s background-color,.3s .5s box-shadow;
+    transition: 0.1s .3s background-color,.1s .3s box-shadow;
     box-sizing: border-box;
     position: relative;
     border: none;
@@ -273,7 +273,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     position: absolute;
     left: 0;
     top: 0;
-    transition: .5s ease-in-out all;
+    transition: .3s ease-in-out all;
 }
 
 .prt_btn::before{
@@ -286,7 +286,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     position: absolute;
     right: 0;
     bottom: 0;
-    transition:.5s ease-in-out all;
+    transition:.3s ease-in-out all;
 }
 .prt_btn:hover:before,.prt_btn:hover:after{
     width: 100%;
@@ -1377,16 +1377,6 @@ input:focus, textarea:focus, select:focus, button:focus {
     filter: blur(40px);
 }
 
-.prt_portfolio_box > .prt_loadmore:nth-child(even)::after,
-.prt_portfolio_box > .prt_loadmore:nth-child(even)::before{
-    background: linear-gradient(235deg, #ff00c8, #010615,#bfd400);
-}
-
-.prt_portfolio_box > .prt_loadmore:nth-child(odd)::after,
-.prt_portfolio_box > .prt_loadmore:nth-child(odd)::before{
-    background: linear-gradient(235deg, #c300ff, #010615,#006dd4);
-}
-
 .prt_portfolio_box{
 	display:inline-block;
 	width:100%;
@@ -1584,6 +1574,9 @@ input:focus, textarea:focus, select:focus, button:focus {
     }
     .prt_services_wrapper{
         height: 900px;
+    }
+    .prt_contact_details_box{
+        -webkit-box-reflect: unset;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
